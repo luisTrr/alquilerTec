@@ -13,7 +13,7 @@ class PublicacionesController extends Controller
     public function index()
     {
         $publicaciones = Publicaciones::all();
-        return view('publicaciones.index', compact('publicaciones'));
+        return view('publicaciones.ingresar', compact('publicaciones'));
     }
 
     public function create()
