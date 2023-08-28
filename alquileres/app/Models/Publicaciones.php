@@ -10,6 +10,8 @@ class Publicaciones extends Model
     use HasFactory;
     protected $table = 'publicaciones';
 
+    public $timestamps = false;
+
     protected $fillable = [
         'titulo', 'descripcion', 'usuario_id', 'direccion', 'precio', 'imagen', 'opciones_alquiler_id', 'alquiler_anticretico_id'
     ];
