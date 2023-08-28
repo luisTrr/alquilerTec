@@ -14,7 +14,8 @@ use App\Http\Controllers\UsuariosController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::post('Registrar', [UsuariosController::class, 'Registrar']);
+Route::get('Principal', [UsuariosController::class, 'index']);
+Route::post('Registrar', [UsuariosController::class, 'Registrar'])->name('usuarios.registrar');
 Route::post('Login', [UsuariosController::class, 'Login'])->name('usuarios.ingresar');
 Route::group(['middleware'=>["auth:sanctum"]],function(){
     Route::get('PerfilUsuario', [UsuariosController::class, 'PerfilUsuario']);

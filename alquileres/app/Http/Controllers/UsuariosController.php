@@ -11,7 +11,7 @@ class UsuariosController extends Controller
     public function index()
     {
         $usuarios = Usuarios::all();
-        return view('usuarios.index', compact('usuarios'));
+        return view('usuarios.ingresar', compact('usuarios'));
     }
     public function Registrar(Request $request){
         $request->validate([
