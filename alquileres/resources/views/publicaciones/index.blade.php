@@ -10,7 +10,7 @@
     <h1>Lista de Publicaciones</h1>
     <a href="{{ route('publicaciones.create') }}" class="btn btn-primary">Crear Publicacion</a>
     <ul>
-        @foreach ($alquilerAnticretico as $p)
+        @foreach ($publicaciones as $p)
             <li>{{ $p->titulo }} - {{ $p->descripcion }} (Precio: {{ $p->precio }})</li>
         @endforeach
     </ul>

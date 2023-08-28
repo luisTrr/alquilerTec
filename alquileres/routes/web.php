@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PublicacionController;
+use App\Http\Controllers\PublicacionesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +16,6 @@ use App\Http\Controllers\PublicacionController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/publicaciones', [PublicacionController::class, 'index'])->name('publicaciones.index');
-Route::get('/publicaciones/create', [PublicacionController::class, 'create'])->name('publicaciones.create');
-Route::post('/publicaciones', [PublicacionController::class, 'store'])->name('publicaciones.store');
+Route::get('/publicaciones', [PublicacionesController::class, 'index'])->name('publicaciones.index');
+Route::get('/publicaciones/create', [PublicacionesController::class, 'create'])->name('publicaciones.create');
+Route::post('/publicaciones', [PublicacionesController::class, 'store'])->name('publicaciones.store');

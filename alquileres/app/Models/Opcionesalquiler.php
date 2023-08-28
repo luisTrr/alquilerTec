@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Opcionalquiler extends Model
+class Opcionesalquiler extends Model
 {
     protected $table = 'opcionesAlquiler';
 

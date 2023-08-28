@@ -8,7 +8,7 @@ use App\Models\Recursos;
 use App\Models\Opcionesalquiler;
 use App\Models\Alquileranticretico;
 
-class PublicacionController extends Controller
+class PublicacionesController extends Controller
 {
     public function index()
     {

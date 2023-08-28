@@ -18,14 +18,6 @@
                 @endforeach
             </select>
         </div>
-        <!-- <div class="form-group">
-            <label for="usuario_id">Usuario</label>
-            <select id="usuario_id" name="usuario_id" class="form-control" required>
-                @foreach ($usuarios as $usuario)
-                    <option value="{{ $usuario->id }}">{{ $usuario->nombre }}</option>
-                @endforeach
-            </select>
-        </div> -->
         <div class="form-group">
             <label for="titulo">Título</label>
             <input type="text" id="titulo" name="titulo" class="form-control" required>
@@ -46,21 +38,6 @@
             <label for="precio">Precio</label>
             <input type="number" id="precio" name="precio" class="form-control" required>
         </div>
-        <!-- <div class="form-group">
-            <label for="recursos_id">Recurso de Alquiler</label>
-            <select id="recursos_id" name="recursos_id" class="form-control" required>
-                @foreach ($recursosAlquiler as $recursoAlquiler)
-                    <option value="{{ $recursoAlquiler->id }}">Wifi: {{ $recursoAlquiler->wifi ? 'Sí' : 'No' }} - Agua Caliente: {{ $recursoAlquiler->agua_caliente ? 'Sí' : 'No' }}</option>
-                @endforeach
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="adventista">¿Es recidencia adventista?</label>
-            <select id="adventista" name="adventista" class="form-control" required>
-                <option value="1">Sí</option>
-                <option value="0">No</option>
-            </select>
-        </div> -->
         <button type="submit" class="btn btn-primary">Guardar</button>
     </form>
     </div>
