@@ -8,6 +8,11 @@ use App\Models\Usuarios;
 
 class UsuariosController extends Controller
 {
+    public function index()
+    {
+        $usuarios = Usuarios::all();
+        return view('usuarios.index', compact('usuarios'));
+    }
     public function Registrar(Request $request){
         $request->validate([
             'nombre'=> 'required',

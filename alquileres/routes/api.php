@@ -15,7 +15,7 @@ use App\Http\Controllers\UsuariosController;
 |
 */
 Route::post('Registrar', [UsuariosController::class, 'Registrar']);
-Route::post('Login', [UsuariosController::class, 'Login']);
+Route::post('Login', [UsuariosController::class, 'Login'])->name('usuarios.ingresar');
 Route::group(['middleware'=>["auth:sanctum"]],function(){
     Route::get('PerfilUsuario', [UsuariosController::class, 'PerfilUsuario']);
     Route::get('LogOut', [UsuariosController::class, 'LogOut']);
