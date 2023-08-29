@@ -8,10 +8,15 @@ use App\Models\Usuarios;
 
 class UsuariosController extends Controller
 {
-    public function index()
+    public function indexLogin()
     {
         $usuarios = Usuarios::all();
         return view('usuarios.ingresar', compact('usuarios'));
+    }
+    public function indexRegistrar()
+    {
+        $usuarios = Usuarios::all();
+        return view('usuarios.registrar', compact('usuarios'));
     }
     public function Registrar(Request $request){
         $request->validate([
@@ -27,10 +32,7 @@ class UsuariosController extends Controller
         $user -> celular = $request -> celular;
         $user -> save();
         
-        return response()->json([
-            "status"=>1,
-            "msg"=>"Registro de usuario exitoso",
-        ]);
+        return redirect()->route('usuarios.principal')->with('success', 'Usuario registrado exitosamente');
 
     } 
     public function Login(Request $request){

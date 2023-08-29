@@ -8,7 +8,7 @@
 <body>
     <div style="background:0f1f1f1;widt:45%; height:150px">
     <h1>Ingresar</h1>
-    <a href="{{ route('usuarios.registrar') }}" class="btn btn-primary">Registrate</a>
+    <a href="{{ route('usuarios.MostrarRegistrar') }}" class="btn btn-primary">Registrate</a>
     <!-- <button href="{{ route('usuarios.ingresar') }}" type="submit" class="btn btn-primary">Registrar</button> -->
     <form action="{{ route('usuarios.ingresar') }}" method="POST">
         @csrf
